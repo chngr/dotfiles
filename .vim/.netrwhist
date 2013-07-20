@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/etc/cron.d'
+let g:netrw_dirhist_2='/home/chngr/polychart/ggviz/forks/dbb/server/dataSources'
+let g:netrw_dirhist_3='/home/chngr/polychart/ggviz/python/polychart'

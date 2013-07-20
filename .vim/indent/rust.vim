@@ -1,0 +1,1 @@
+/home/chngr/projects/rust/src/etc/vim/indent/rust.vim

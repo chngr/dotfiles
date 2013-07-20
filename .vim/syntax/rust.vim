@@ -1,0 +1,1 @@
+/home/chngr/projects/rust/src/etc/vim/syntax/rust.vim
