@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/etc/cron.d'
-let g:netrw_dirhist_2='/home/chngr/polychart/ggviz/forks/dbb/server/dataSources'
-let g:netrw_dirhist_3='/home/chngr/polychart/ggviz/python/polychart'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/chngr/polychart/dbb/server/polychart/main/views'
+let g:netrw_dirhist_2='/home/chngr/polychart/dbb/node_modules/grunt/lib/grunt'
+let g:netrw_dirhist_3='/home/chngr/polychart/dbb/src/poly'
+let g:netrw_dirhist_4='/home/chngr/.vim'
+let g:netrw_dirhist_5='/home/chngr/polychart/dbb/server/polychartQuery/googleAnalytics'
+let g:netrw_dirhist_6='/home/chngr/polychart/dbb/src/poly/main/dash'
+let g:netrw_dirhist_7='/home/chngr/polychart/dbb/exportService'
+let g:netrw_dirhist_8='/home/chngr/.oh-my-zsh/custom'

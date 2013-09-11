@@ -12,7 +12,9 @@ myLayout = ThreeCol 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| ThreeCol 1 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
     xmonad $ defaultConfig
-        { manageHook  = manageDocks <+> manageHook defaultConfig
+        { terminal    = "urxvt"
+        , borderWidth = 0
+        , manageHook  = manageDocks <+> manageHook defaultConfig <+> doFloat
         , startupHook = setWMName "LG3d"
         , layoutHook  = avoidStruts $ layoutHook defaultConfig ||| noBorders Full ||| myLayout
         , logHook     = dynamicLogWithPP $ xmobarPP

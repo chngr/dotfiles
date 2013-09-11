@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="zhann"
+# ZSH_THEME="zhann"
+ZSH_THEME="af-magic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -37,12 +38,49 @@ plugins=(git textmate lighthouse)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# Nice utility to jump around directory trees
+# See 'http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html'
+export MARKPATH=$HOME/.marks
+function jump {
+  cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark {
+  rm -i "$MARKPATH/$1"
+}
+function marks {
+  ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+function _completemarks {
+  reply=($(ls $MARKPATH))
+}
+compctl -K _completemarks jump
+compctl -K _completemarks unmark
+
 export DJANGO_SETTINGS_MODULE=config.local.django
-export PYTHONPATH=$HOME/polychart/ggviz/python:$HOME/projects/uberwriter
-export PATH=$PATH:/home/chngr/.cabal/bin:/usr/local/texlive/2012/bin/i386-linux:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/etc/mysql:/usr/lib/postgresql/X.Y/bin:$HOME/android-sdk/sdk/tools:$HOME/android-sdk/sdk/platform-tools:
+export PYTHONPATH=$HOME/polychart/dbb/server:$HOME/projects/uberwriter
+export PATH=$PATH\
+:/home/chngr/.cabal/bin\
+:/usr/local/texlive/2013/bin/i386-linux\
+:/usr/lib/lightdm/lightdm\
+:/usr/local/sbin\
+:/usr/local/bin\
+:/usr/sbin\
+:/usr/bin\
+:/sbin\
+:/bin\
+:/etc/mysql\
+:/usr/lib/postgresql/X.Y/bin\
+:/usr/local/go/bin:\
+:$HOME/android-sdk/sdk/tools\
+:$HOME/android-sdk/sdk/platform-tools\
+:$HOME/bin
 
 # Aliases
-alias subl='/usr/share/sublimetext2/sublime_text' 
+alias subl='/usr/share/sublimetext2/sublime_text'
 alias mysqlib='/usr/local/infobright/bin/mysql'
 alias mysqldib='/usr/local/infobright/bin/mysqld_safe'
 alias v=vi
