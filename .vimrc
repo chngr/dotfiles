@@ -7,7 +7,7 @@ Helptags
 
 " GUI options
 if has('gui_running')
-"  set guifont=monofur\ 10
+  set guifont=inconsolata\ 9
   set guioptions-=T
   set guioptions-=mL
   set guioptions-=mTmLmRLt
@@ -32,12 +32,11 @@ set tabstop=2
 set wildmenu
 
 " Colors
-"set background=dark
-"hi ColorColumn ctermbg=236 guibg=#4c425d
-hi ColorColumn ctermbg=253
+set background=dark
+colo inkpot
+hi ColorColumn ctermbg=236 guibg=#4c425d
 let &colorcolumn="81,".join(range(100,999),',')
-"hi Cursorline  ctermbg=234 guibg=#4c425d
-hi Cursorline ctermbg=253
+hi Cursorline  ctermbg=234 guibg=#4c425d
 hi Search ctermbg=170 guibg=#cc92ef
 
 set cursorline
