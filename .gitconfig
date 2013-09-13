@@ -37,5 +37,3 @@
   excludesfile = ~/.gitignore
 [merge]
   conflictstyle = diff3
-[credential]
-	helper = keychain

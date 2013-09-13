@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="zhann"
-ZSH_THEME="af-magic"
+# ZSH_THEME="af-magic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -35,7 +35,7 @@ ZSH_THEME="af-magic"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git textmate lighthouse)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
@@ -60,35 +60,22 @@ function _completemarks {
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
-export DJANGO_SETTINGS_MODULE=config.local.django
-export PYTHONPATH=$HOME/polychart/dbb/server:$HOME/projects/uberwriter
 export PATH=$PATH\
-:/home/chngr/.cabal/bin\
-:/usr/local/texlive/2013/bin/i386-linux\
-:/usr/lib/lightdm/lightdm\
 :/usr/local/sbin\
 :/usr/local/bin\
 :/usr/sbin\
 :/usr/bin\
 :/sbin\
 :/bin\
-:/etc/mysql\
-:/usr/lib/postgresql/X.Y/bin\
-:/usr/local/go/bin:\
-:$HOME/android-sdk/sdk/tools\
-:$HOME/android-sdk/sdk/platform-tools\
 :$HOME/bin
 
 # Aliases
-alias subl='/usr/share/sublimetext2/sublime_text'
-alias mysqlib='/usr/local/infobright/bin/mysql'
-alias mysqldib='/usr/local/infobright/bin/mysqld_safe'
-alias v=vi
+alias v=vim
 alias c=clear
 
 # Suffic Aliases
 alias -s tex=vim
-alias -s html=chromium-browser
+alias -s html=firefox
 alias -s rkt=racket
 alias -s py=python
 alias -s coffee=coffee
@@ -99,13 +86,5 @@ alias lsp="ls -I '*.pyc'"
 # 256 colors
 export TERM=xterm-256color
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export ANDROID_HOME="$HOME/android-sdk/sdk"
-
 ## Rust stuff
 export RUST_LOG=rust_log
-
-### Stuff for keyring
-keychain --quiet --nolock ~/.sshr/id_rsa 2>/dev/null
-. ~/.keychain/chngr-sh

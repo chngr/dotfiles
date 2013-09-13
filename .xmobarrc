@@ -4,12 +4,12 @@ Config { font    = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
        , position = Top L 90
        , commands = [ Run Memory ["-t", "Mem: <usedratio>%"] 10
                     , Run Cpu ["-L", "15", "-H", "50", "--normal", "green", "--high", "red"] 10
-                    , Run Battery ["-L", "15", "-H", "70", "--normal", "yellow", "--high", "green", "--low", "red", "-t", "Batt: <left>% / <timeleft>", "--", "-c", "charge_full", "-f", "/sys/class/power_supply/ACAD/online"] 10
+                    , Run Battery ["-L", "15", "-H", "70", "--normal", "yellow", "--high", "green", "--low", "red", "-t", "Batt: <left>% / <timeleft>", "--", "charge_full", "-f", "/sys/class/power_supply/ACAD/online"] 10
                     , Run Date "%a %b %_d %l:%M" "date" 10
                     , Run Network "wlan0" ["-L", "0", "-H", "32", "--normal", "green", "--high", "red"] 10
                     , Run StdinReader
                     ]
-       , sepChar = "%"
+       , sepChar  = "%"
        , alignSep = "}{"
        , template = "%StdinReader% }{ %cpu% | %memory% | %battery% | %wlan0% | %date%" 
        }
