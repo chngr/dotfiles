@@ -1,11 +1,138 @@
-snippet cal
-\mathcal{${1:${VISUAL}}}$2
+##########################
+#  Theorem Environments  #
+##########################
+
+snippet defn "Definition" b
+\begin{defn}\label{defn:$1}
+	$2
+\end{defn}
 endsnippet
 
-snippet em
-\textem{${1:${VISUAL}}}$2
+snippet thm "Theorem" b
+\begin{thm}\label{defn:$1}
+	$2
+\end{thm}
 endsnippet
 
-snippet bf
-\textbf{${1:${VISUAL}}}$2
+snippet prop "Proposition" b
+\begin{prop}\label{prop:$1}
+	$2
+\end{prop}
+endsnippet
+
+snippet cor "Corollary" b
+\begin{cor}\label{cor:$1}
+	$2
+\end{prop}
+endsnippet
+
+snippet lem "Lemma" b
+\begin{lem}\label{lem:$1}
+	$2
+\end{lem}
+endsnippet
+
+############
+#  Others  #
+############
+
+snippet aln "Align" b
+\begin{align*}
+	${1:${VISUAL}}
+\end{align*}
+endsnippet
+
+snippet bf "Bolding"
+\textbf{${1:${VISUAL}}}
+endsnippet
+
+snippet it "Italics"
+\textit{${1:${VISUAL}}}
+endsnippet
+
+###############
+#  Templates  #
+###############
+
+snippet tufte-notes-base "Template for base notes in 'tufte-handout' style" b
+\documentclass{tufte-handout}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+  \theoremstyle{theorem}
+  \newtheorem{thm}{Theorem}
+  \newtheorem{prop}[thm]{Proposition}
+  \newtheorem{lem}[thm]{Lemma}
+  \newtheorem{cor}[thm]{Corollary}
+  \theoremstyle{definition}
+  \newtheorem{defn}{Defintion}
+  \theoremstyle{remark}
+  \newtheorem{rem}{Remark}
+  \newtheorem{eg}{Example}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{todonotes}
+
+%%% Macros
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\nats}{\ints_+}
+\newcommand{\natz}{\ints_{\geq 0}}
+\newcommand{\natsn}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsp}{\reals_+}
+\newcommand{\realsnn}{\reals_{\geq 0}}
+\newcommand{\complex}{\mathbb{C}}
+
+\title{$1}
+\begin{document}
+	$2
+\end{document}
+endsnippet
+
+snippet new-assignment "Template for a new assignment" b
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{thm}{theorem}
+\newtheorem{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}
+\newtheorem{prob}{Problem}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%%% Macros
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\nats}{\ints_+}
+\newcommand{\natz}{\ints_{\geq 0}}
+\newcommand{\natsn}{\mathbb{N}}
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsp}{\reals_+}
+\newcommand{\realsnn}{\reals_{\geq 0}}
+\newcommand{\complex}{\mathbb{C}}
+
+% Define Custom Commands Here
+
+% Header
+\title{$1 Assignment $2}
+\author{Raymond Cheng, 20477752}
+\date{$3}
+\begin{document}
+\maketitle
+$4
+\end{document}
+endsnippet
+
+snippet a-prob "Assignment Problem" b
+% Problem ${1:n}
+\begin{prob}
+	$2
+\end{prob}
 endsnippet
