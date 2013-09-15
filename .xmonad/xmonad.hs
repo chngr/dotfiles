@@ -12,7 +12,7 @@ myLayout = ThreeCol 1 (3/100) (1/2) ||| ThreeCol 1 (3/100) (1/2) ||| ThreeCol 1 
 main = do
     xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmobarrc"
     xmonad $ defaultConfig
-        { terminal    = "urxvt"
+        { terminal    = "urxvtc"
         , borderWidth = 0
         , manageHook  = manageDocks <+> manageHook defaultConfig <+> doFloat
         , startupHook = setWMName "LG3d"
