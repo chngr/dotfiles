@@ -54,12 +54,13 @@ endsnippet
 #  Templates  #
 ###############
 
-snippet tufte-notes-base "Template for base notes in 'tufte-handout' style" b
-\documentclass{tufte-handout}
+snippet notesbase "Template for base notes in 'tufte-handout' style" b
+\documentclass[a4paper,10pt,parskip=half*]{scrartcl}
+\usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-  \theoremstyle{theorem}
+  \theoremstyle{plain}
   \newtheorem{thm}{Theorem}
   \newtheorem{prop}[thm]{Proposition}
   \newtheorem{lem}[thm]{Lemma}
@@ -69,21 +70,72 @@ snippet tufte-notes-base "Template for base notes in 'tufte-handout' style" b
   \theoremstyle{remark}
   \newtheorem{rem}{Remark}
   \newtheorem{eg}{Example}
+\usepackage[sc]{mathpazo}
+\usepackage[utf8]{inputenc}
 \usepackage{caption}
-\usepackage{microtype}
 \usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{nath}
 \usepackage{todonotes}
 
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
+\DeclarePairedDelimiter{\aGen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\set}{\{}{\}}
+
 %%% Macros
-\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\ints}{\mathbf{Z}}
 \newcommand{\nats}{\ints_+}
 \newcommand{\natz}{\ints_{\geq 0}}
-\newcommand{\natsn}{\mathbb{N}}
-\newcommand{\rats}{\mathbb{Q}}
-\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natsn}{\mathbf{N}}
+\newcommand{\rats}{\mathbf{Q}}
+\newcommand{\reals}{\mathbf{R}}
 \newcommand{\realsp}{\reals_+}
 \newcommand{\realsnn}{\reals_{\geq 0}}
-\newcommand{\complex}{\mathbb{C}}
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\set}[1]{\left\\{#1\right\\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\id}{\mathrm{id}}
+
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\ZP}{\mathbf{Z}_+}
+\newcommand{\ZNN}{\mathbf{Z}_{\geq 0}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\RP}{\mathbf{R}_+}
+\newcommand{\RPN}{\mathbf{R}_{\geq 0}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\FF}{\mathbf{F}}
+
+% Mathcal letters
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
 
 \title{$1}
 \begin{document}
@@ -92,33 +144,88 @@ snippet tufte-notes-base "Template for base notes in 'tufte-handout' style" b
 endsnippet
 
 snippet new-assignment "Template for a new assignment" b
-\documentclass{article}
+\documentclass[10pt,a4paper,parskip=half*]{scrartcl}
 \usepackage{fullpage}
 \usepackage{mathtools}
 \usepackage{enumerate}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\newtheorem{thm}{theorem}
-\newtheorem{prop}{Proposition}
-\theoremstyle{definition}
-\newtheorem{defi}{Definition}
-\newtheorem{prob}{Problem}
-\theoremstyle{remark}
-\newtheorem{rem}{Remark}
+	\theoremstyle{plain}
+	\newtheorem{thm}{theorem}
+	\newtheorem{prop}{Proposition}
+	\theoremstyle{definition}
+	\newtheorem{defi}{Definition}
+	\newtheorem{prob}{Problem}
+	\theoremstyle{remark}
+	\newtheorem{rem}{Remark}
+\usepackage[sc]{mathpazo}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{nath}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
+\DeclarePairedDelimiter{\aGen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\set}{\{}{\}}
 
 %%% Macros
-\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\ints}{\mathbf{Z}}
 \newcommand{\nats}{\ints_+}
 \newcommand{\natz}{\ints_{\geq 0}}
-\newcommand{\natsn}{\mathbb{N}}
-\newcommand{\rats}{\mathbb{Q}}
-\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natsn}{\mathbf{N}}
+\newcommand{\rats}{\mathbf{Q}}
+\newcommand{\reals}{\mathbf{R}}
 \newcommand{\realsp}{\reals_+}
 \newcommand{\realsnn}{\reals_{\geq 0}}
-\newcommand{\complex}{\mathbb{C}}
+\newcommand{\complex}{\mathbf{C}}
+\newcommand{\set}[1]{\left\\{#1\right\\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\id}{\mathrm{id}}
+
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\ZP}{\mathbf{Z}_+}
+\newcommand{\ZNN}{\mathbf{Z}_{\geq 0}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\RP}{\mathbf{R}_+}
+\newcommand{\RPN}{\mathbf{R}_{\geq 0}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\FF}{\mathbf{F}}
+
+% Mathcal letters
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
 
 % Define Custom Commands Here
+
 
 % Header
 \title{$1 Assignment $2}
@@ -130,7 +237,7 @@ $4
 \end{document}
 endsnippet
 
-snippet a-prob "Assignment Problem" b
+snippet prob "Assignment Problem" b
 % Problem ${1:n}
 \begin{prob}
 	$2

@@ -120,3 +120,10 @@ if !has('gui_running')
 endif
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filtypes = ['help', 'nerdtree', 'tex']
+
+" Prevent UltiSnips from stealing ctrl-k, use ctrl-b instead
+augroup VimStartup
+  autocmd!
+  autocmd VimEnter * sil! iunmap <C-K>
+augroup end
+let g:UltiSnipsJumpBackwardTrigger = "<C-B>"

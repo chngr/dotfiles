@@ -76,3 +76,12 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule ".vim/bundle/unicode-haskell"]
+	path = .vim/bundle/unicode-haskell
+	url = git@github.com:frerich/unicode-haskell.git
+[submodule ".vim/bundle/vim-haskellConceal"]
+	path = .vim/bundle/vim-haskellConceal
+	url = git@github.com:Twinside/vim-haskellConceal.git
+[submodule ".vim/bundle/csv.vim"]
+	path = .vim/bundle/csv.vim
+	url = git@github.com:chrisbra/csv.vim.git

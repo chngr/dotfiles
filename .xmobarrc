@@ -14,5 +14,5 @@ Config { font    = "xft:Anonymous Pro:size=9"
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% :: %cpu% | %memory% * %swap% | %battery% | %enp2s0% - %wlp3s0% }{ %date% | %uname% "
+       , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %battery% | %enp2s0% - %wlp3s0% λ. %date% | %uname% "
        }
