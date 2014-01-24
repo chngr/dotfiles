@@ -37,3 +37,5 @@
   excludesfile = ~/.gitignore
 [merge]
   conflictstyle = diff3
+[github]
+	user = chngr

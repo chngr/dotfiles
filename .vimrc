@@ -33,7 +33,7 @@ set wildmenu
 
 " Colors
 set background=dark
-colo inkpot
+colo ir_black
 hi ColorColumn ctermbg=236 guibg=#4c425d
 let &colorcolumn="81,".join(range(100,999),',')
 hi Cursorline  ctermbg=234 guibg=#4c425d

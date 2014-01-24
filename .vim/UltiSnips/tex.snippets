@@ -70,19 +70,20 @@ snippet notesbase "Template for base notes in 'tufte-handout' style" b
   \theoremstyle{remark}
   \newtheorem{rem}{Remark}
   \newtheorem{eg}{Example}
+\usepackage{mathtools}
+\usepackage{enumerate}
 \usepackage[sc]{mathpazo}
 \usepackage[utf8]{inputenc}
 \usepackage{caption}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage{nath}
 \usepackage{todonotes}
 
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\inner}{\langle}{\rangle}
-\DeclarePairedDelimiter{\aGen}{\langle}{\rangle}
-\DeclarePairedDelimiter{\set}{\{}{\}}
+\DeclarePairedDelimiter{\agen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\set}{\\{}{\\}}
 
 %%% Macros
 \newcommand{\ints}{\mathbf{Z}}
@@ -94,8 +95,6 @@ snippet notesbase "Template for base notes in 'tufte-handout' style" b
 \newcommand{\realsp}{\reals_+}
 \newcommand{\realsnn}{\reals_{\geq 0}}
 \newcommand{\complex}{\mathbf{C}}
-\newcommand{\set}[1]{\left\\{#1\right\\}}
-\newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\id}{\mathrm{id}}
 
 \newcommand{\ZZ}{\mathbf{Z}}
@@ -108,6 +107,9 @@ snippet notesbase "Template for base notes in 'tufte-handout' style" b
 \newcommand{\RPN}{\mathbf{R}_{\geq 0}}
 \newcommand{\CC}{\mathbf{C}}
 \newcommand{\FF}{\mathbf{F}}
+
+\renewcommand{\Im}{\mathrm{im\,}}
+\newcommand{\Ker}{\mathrm{ker\,}}
 
 % Mathcal letters
 \newcommand{\cA}{\mathcal{A}}
@@ -163,13 +165,12 @@ snippet new-assignment "Template for a new assignment" b
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{microtype}
-\usepackage{nath}
 
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \DeclarePairedDelimiter{\inner}{\langle}{\rangle}
-\DeclarePairedDelimiter{\aGen}{\langle}{\rangle}
-\DeclarePairedDelimiter{\set}{\{}{\}}
+\DeclarePairedDelimiter{\agen}{\langle}{\rangle}
+\DeclarePairedDelimiter{\set}{\\{}{\\}}
 
 %%% Macros
 \newcommand{\ints}{\mathbf{Z}}
@@ -181,8 +182,6 @@ snippet new-assignment "Template for a new assignment" b
 \newcommand{\realsp}{\reals_+}
 \newcommand{\realsnn}{\reals_{\geq 0}}
 \newcommand{\complex}{\mathbf{C}}
-\newcommand{\set}[1]{\left\\{#1\right\\}}
-\newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\id}{\mathrm{id}}
 
 \newcommand{\ZZ}{\mathbf{Z}}
@@ -195,6 +194,9 @@ snippet new-assignment "Template for a new assignment" b
 \newcommand{\RPN}{\mathbf{R}_{\geq 0}}
 \newcommand{\CC}{\mathbf{C}}
 \newcommand{\FF}{\mathbf{F}}
+
+\renewcommand{\Im}{\mathrm{im\,}}
+\newcommand{\Ker}{\mathrm{ker\,}}
 
 % Mathcal letters
 \newcommand{\cA}{\mathcal{A}}
